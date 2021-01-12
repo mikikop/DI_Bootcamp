@@ -1,36 +1,110 @@
 body {
     background-color: white;
+    
 }
 
+
+/*rajout*/
 .topnav {
     overflow: hidden;
-    background-color: white;
+    /*background-color: blue;*/
+    background-image: radial-gradient(circle, blue, red);
+    position: relative;
+    height: 50px;
+    border:2px solid black;
   }
 
+/*rajout*/
 #av_logo {
-    display: inline;
+    /*display: inline;*/
     position: absolute;
+    top:0px;
+    left:20px;
     width: 40px;
-    margin-left: 100px;
+    /*margin-left: 100px;*/
 }
 
-ul li{
+/*rajout*/
+ul{
+    position: absolute;
+    top:0px;
+    right:800px;
+
+}
+
+/*rajout*/
+li {
+    display: inline-block;
+    margin-left: 100px;
+    margin-right:100px;
+    padding: 2px;
+}
+
+/*ul li{
     display: inline;
     margin-left: 100px;
-}
+}*/
 
+/*rajout*/
 #sp_name {
-    display: inline;
-    width: 300px;
+    position: relative;
+    bottom: 200px;
+    /*display: inline;*/
+    width: 600px;
 }
 
+/*rajout*/
 #ud_name {
-    display: inline;
+    /*display: inline;*/
+    position: relative;
+    left: 300px;
     width: 50%;
+}
+
+.bio {
+    position: relative;
+}
+
+#ud_name_bio {
+    position: absolute;
+    bottom: 200px;
+    /*display: inline;*/
+    width: 600px;
+}
+
+#article_bio {
+    position: absolute;
+    bottom: 200px;
+    width: 40px;
+}
+
+article h2 {
+    position: absolute;
+    width: 100px;
+    top: 100px;
 }
 
 a {
     text-decoration: none;
+}
+
+/*rajout*/
+footer {
+    position: relative;
+}
+
+
+/*rajout*/
+span {
+    line-height: 4
+}
+
+/*rajout*/
+.container_icon {
+    /*rajout*/
+    position: absolute;
+    top:0px;
+    right:0px;
 }
 
 .fa {
@@ -42,7 +116,7 @@ a {
     margin: 5px 2px;
 }
 
-  .fa:hover {
+.fa:hover {
     opacity: 0.7;
 }
 
@@ -54,4 +128,4 @@ a {
 .fa-instagram {
     background: #125688;
     color: white;
-  }
+}
