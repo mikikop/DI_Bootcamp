@@ -1,0 +1,92 @@
+.container {
+
+    display: grid;
+    height: 95vh;
+    grid-template-areas:
+    'header header header'
+    'number1 number2 number3'
+    'plan1 plan2 plan3';
+    
+    grid-gap: 0px;
+    background-image: url("assets/background_texture_shopify.jpg");
+    padding: 0px;
+  }
+
+  
+.part1 {
+    background-color: none;
+    width: 100%;
+    height: 20vh;
+   /* border: 1px solid black;*/
+    grid-area: header;
+    opacity: 1;
+}
+
+.part1 p {
+    background-color: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.part2 {
+    /*background-color: rgb(17, 0, 255);*/
+    width: 100%;
+    height: 30vh;
+    /*border: 1px solid black;*/
+    grid-area: number1;
+    text-align: center;
+}
+
+.part3 {
+   /* background-color: rgb(136, 255, 0);*/
+    width: 100%;
+    height: 30vh;
+   /* border: 1px solid black;*/
+    grid-area: number2;
+    text-align: center;
+}
+.part4 {
+    /*background-color: rgb(255, 0, 200);*/
+    width: 100%;
+    height: 30vh;
+    /*border: 1px solid black;*/
+    grid-area: number3;
+    text-align: center;
+}
+
+.part5 {
+    /*background-color: rgb(238, 255, 0);*/
+    width: 100%;
+    height: 45vh;
+    /*border: 1px solid black;*/
+    grid-area: plan1;
+    text-align: center;
+}
+
+.part6 {
+    /*background-color: rgba(170, 165, 172, 0.274);*/
+    width: 100%;
+    height: 45vh;
+    /*border: 1px solid black;*/
+    grid-area: plan2;
+    text-align: center;
+}
+
+.part7 {
+   /* background-color: rgb(255, 0, 0);*/
+    width: 100%;
+    height: 45vh;
+    /*border: 1px solid black;*/
+    grid-area: plan3;
+    text-align: center;
+}
+
+#bot {
+    position: relative;
+}
+
+/*#bot-child{
+    position: absolute;
+    bottom: 0;
+}*/
