@@ -1,0 +1,14 @@
+.home {
+   background-image: url("assets/backgroundExo.jpg");
+   background-size: 100%;
+}
+
+.side{
+    position: relative;
+    right: 0px;
+    margin-top: 10px;
+}
+
+.icon{
+    color: blue;
+}
