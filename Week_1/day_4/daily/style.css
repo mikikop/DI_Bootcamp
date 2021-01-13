@@ -1,0 +1,37 @@
+.box{
+    background-color: brown;
+    width: 100px;
+    height: 100px;
+}
+
+.row1{
+    background-color: red;
+    
+}
+
+.row2{
+    background-color: purple;
+    
+}
+
+.col-md-4 {
+    border: 2px solid yellow;
+}
+
+/* .col-md-8 {
+    border: 2px solid blue;
+    height: 35vh;
+} */
+
+.sidebar {
+    background-color: grey;
+}
+
+main {
+
+}
+
+main h1 {
+    font-weight: bold;
+    margin-top: 10px;
+}
