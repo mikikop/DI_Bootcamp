@@ -1,0 +1,30 @@
+body > div
+{
+    margin:121px 149px;
+
+    width:483px;
+    height:298px;
+
+    border: 3px solid black;
+    background:#676470;
+    color: yellow;
+    
+
+    font-weight: 600;
+    font-size: 16px;
+
+    text-align: center;
+    
+}
+
+.fade {
+    opacity:0.5;
+}
+
+.fade:hover {
+    opacity:1;
+}
+
+.color:hover {
+    background: red;
+}
