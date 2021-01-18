@@ -23,4 +23,4 @@ console.log (fruits);
 let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
 //access the item oranges
-console.log(moreFruits[1][1]);
+console.log(moreFruits[1][1][0]);
