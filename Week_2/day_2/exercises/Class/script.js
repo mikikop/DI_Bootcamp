@@ -1,43 +1,90 @@
-//Ex 1
-let x = 12;
-let y = 11;
+// // OBJECTS : access the element by the property
+// let user = {
+// 	username : "John",
+// 	password : 1234,
+// 	email : "john@gmail.com",
+// 	logIn : true,
+// 	countries : ["israel", "usa"],
+// 	friends : {
+// 		names : ["David", "Sarah"]
+// 	}
+// }
 
-if (x>y) {
-    console.log(x + " is bigger than "+ y);
-} else if (x<y) {
-    console.log(y + " is bigger than "+ x);
-}else {
-    console.log(x + " is equal to "+ y);
-}
+// console.log(user);
+// // 1. display the friends nested object
+// console.log(user["friends"]);
+// // 2. display the list of names of his friends
+// console.log(user["friends"]["names"]);
+// // 3. display the name of best friend : David
+// console.log(user["friends"]["names"][0]);
 
-//Ex2
-let newDog = "Chihuahua";
-let counter = newDog.length;
-console.log("There are " + counter + " letters in "+ newDog);
-console.log(newDog.toUpperCase());
-console.log(newDog.toLowerCase());
-if (newDog === "Chihuahua") {
-    console.log("I love Chihuahua, it’s my favorite dog breed");
-}else {
-    console.log("I dont care, I prefer cats");   
-}
 
-//Ex3
-let num = prompt("Please enter a number ! ");
-if (num%2 == 0) {
-    alert(num + " is an even number");
-} else {
-    alert(num + " is not an even number");
-}
+// // ARRAY OF OBJECTS
+// let users = [
+// 	{
+// 		username : "John",
+// 		password: 1234
+// 	},
+// 	{
+// 		username : "Lea",
+// 		password: 2222
+// 	},
+// 	{
+// 		username : "David",
+// 		password: 6767
+// 	}
+// ];
 
-//Ex4
-let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"]
-if (!(Array.isArray(users) && users.length)) {
-    console.log("no one is online");
-}else if (users.length == 1) {
-    console.log(users[0] + " is online");
-} else if (users.length == 2) {
-    console.log(users[0] + " and " + users[1] + " are online");
-} else {
-    console.log(users[0] + ", " + users[1] + " and " + ((users.length) - 2) + " more are online");
+// console.log(users)
+// // 1. display the information of the 2nd user (object)
+// console.log(users[1]);
+
+// // 2. display the password of the 2nd user
+// console.log(users[1]["password"]);
+
+// let age = prompt("Hi, How old are you?");
+
+// if (age > 18) {
+// 	alert("Powering On. Enjoy the ride!");
+// } else if (age ==18) {
+// 	alert("Congratulations on your first year of driving. Enjoy the ride!");
+// } else {
+// 	alert("Sorry, you are too young to drive this car. Powering off")
+// }
+
+// // assign to a the value 4
+// let a = 2 + 2;
+
+// //check the cases and will display Exactly as an alert
+// switch (a) {
+//   case 3:
+//     alert( 'Too small' );
+//     break;
+//   case 4:
+//     alert( 'Exactly!' );
+//     break;
+//   case 5:
+//     alert( 'Too large' );
+//     break;
+//   default:
+//     alert( "I don't know such values" );
+// }
+
+// assign to a the value 4
+let a = 2 + 2;
+
+//check the cases and will display Right as an alert
+switch (a) {
+  case 4:
+    alert('Right!');
+    break;
+
+  case 3: // (*) grouped two cases
+  case 5:
+    alert('Wrong!');
+    alert("Why don't you take a math class?");
+    break;
+
+  default:
+    alert('The result is strange. Really.');
 }
