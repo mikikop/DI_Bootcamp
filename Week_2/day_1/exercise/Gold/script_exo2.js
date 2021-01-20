@@ -6,3 +6,6 @@ console.log (favoriteColor);
 
 //second possibility
 console.log (me[0]+ " "+ me[1]+ " "+me[2]+ " "+me[3]+ " "+me[4]);
+
+//third 
+console.log(me.join(" "));

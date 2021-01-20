@@ -3,10 +3,11 @@ let starLine = Number(answer);
 
 let tabStar = [];
 
-
+//number of lines
 for (let i = 0; i < starLine ; i++) {
   var starString = '';
-  for (let j=0; j<i+1 ; j++){
+  //number of stars per line
+  for (let j=0; j<= i ; j++){
     starString = starString + '*';
   }
   tabStar[i] = starString;
