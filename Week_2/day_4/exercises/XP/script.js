@@ -131,8 +131,7 @@ function checkBasket(item){
 alert(checkBasket(choice));
 
 Exo5
-1
-way with an object
+//1 way with an object
 let shoppingList = { 
     "banana": 6, 
     "apple": 1,

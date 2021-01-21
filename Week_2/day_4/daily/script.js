@@ -1,6 +1,9 @@
 let words = prompt("Please enter words separated by commas:");
 let wordsArray = words.split(",");
 let longestWord = 0;
+// new frame with flame or heart emojis
+const flame = String.fromCodePoint(0x1F525); 
+const heart = String.fromCodePoint(0x2764);
 
 // Create the FOR loop to find the longest word
 for(let i = 0; i < wordsArray.length; i++){
@@ -11,9 +14,9 @@ for(let i = 0; i < wordsArray.length; i++){
 
 // create the line of stars above and under the frame
 function wrapStars (longWord){
-   let stringStar = '*'.repeat(longWord+4);
-   return stringStar;
-   
+    let stringStar = `*`.repeat(longWord+4);
+    //let stringStar = `${flame}`.repeat(longWord+4);
+    return stringStar;
 }
 
 //create the spaces and star on the right
@@ -23,6 +26,7 @@ function addRightStars(tab){
     for (i=0;i<tab.length;i++) {
         let numSpace = (longestWord+4)-(tab[i].length)-2-1;
         tab[i] = tab[i] + " ".repeat(numSpace) + "*";
+        //tab[i] = tab[i] + " ".repeat(numSpace) + `${flame}`;
     }
     return tab;
 }
@@ -32,6 +36,7 @@ function addRightStars(tab){
 function addLeftStars(tab){
     for (i=0;i<tab.length;i++) {
         tab[i] = `* ` + tab[i];
+        //tab[i] = `${flame}` + tab[i];
     }
     return tab;
 }

@@ -1,0 +1,36 @@
+.greenButton {
+    background-color: rgb(55, 196, 55);
+    width: 70px;
+    margin-right: 1px;
+    color: white;
+}
+
+.orangeButton {
+    background-color: rgb(246, 182, 64);
+    width: 70px;
+    margin-right: 1px;
+    color: white;
+}
+
+.blueButton {
+    background-color: rgb(70, 160, 216);
+    width: 145px;
+    margin-right: 1px;
+    color: white;
+}
+
+.redButton {
+    background-color: red;
+    width: 145px;
+    margin-right: 1px;
+    color: white;
+}
+
+.inputText {
+    width: 289px;
+    height: 30px;
+    
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-size: 25px;
+}
