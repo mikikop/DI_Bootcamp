@@ -1,0 +1,40 @@
+.head{
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  justify-content: space-between;  
+}
+
+.stat {
+  display: flex;
+  background-color: #f1f1f1;
+  width: 300px;
+  height: 100px;
+  margin-left: 50px;
+  text-align: center;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.titre {
+  display: flex;
+  background-color: #f1f1f1;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.donated {
+  display: flex;
+  background-color: #f1f1f1;
+  width: 300px;
+  height: 100px;
+  margin-right: 50px;
+  text-align: center;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
