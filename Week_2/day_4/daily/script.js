@@ -14,8 +14,9 @@ for(let i = 0; i < wordsArray.length; i++){
 
 // create the line of stars above and under the frame
 function wrapStars (longWord){
-    let stringStar = `*`.repeat(longWord+4);
+    //let stringStar = `*`.repeat(longWord+4);
     //let stringStar = `${flame}`.repeat(longWord+4);
+    let stringStar = `${heart}`.repeat(longWord+4);
     return stringStar;
 }
 
@@ -25,8 +26,9 @@ function wrapStars (longWord){
 function addRightStars(tab){
     for (i=0;i<tab.length;i++) {
         let numSpace = (longestWord+4)-(tab[i].length)-2-1;
-        tab[i] = tab[i] + " ".repeat(numSpace) + "*";
+        //tab[i] = tab[i] + " ".repeat(numSpace) + "*";
         //tab[i] = tab[i] + " ".repeat(numSpace) + `${flame}`;
+        tab[i] = tab[i] + " ".repeat(numSpace) + `${heart}`;
     }
     return tab;
 }
@@ -35,8 +37,9 @@ function addRightStars(tab){
 //create the star and space on the left 
 function addLeftStars(tab){
     for (i=0;i<tab.length;i++) {
-        tab[i] = `* ` + tab[i];
+        //tab[i] = `* ` + tab[i];
         //tab[i] = `${flame}` + tab[i];
+        tab[i] = `${heart}` + tab[i];
     }
     return tab;
 }
