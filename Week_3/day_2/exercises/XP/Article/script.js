@@ -63,11 +63,10 @@ function insertTable(event) {
         table.appendChild(tr);
 }
 
-//7
+//7 NOT SUCESS
 let secondPar = parAll[1];
 secondPar.addEventListener("click", fadeOut);
 
 function fadeOut(event) {
-event.classList.add('hide');
+event.target.style.transition = "opacity 3s ease-in-out";
 }
-

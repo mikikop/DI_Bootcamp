@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+  <title>Exercises_W3_d3_Exercises XP</title>
+
+  <style>
+   
+   #container {
+     border: 2px solid black;
+     width: 600px;
+     height: 600px;
+   }
+
+    #left {
+      height: 200px;
+      width: 200px;
+      margin-left: 20px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 2px solid blue;
+      display: inline-block;
+      background-color: red;
+    }
+
+    #right {
+      background-color: yellow;
+      margin-left: 500px;
+      height: 50px;
+      width:30px;
+    }
+
+    /* #fig {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #aaaaaa; 
+}*/
+
+  </style>
+
+
+</head>
+
+<body>
+  <div id="container">
+  <div id="left" ondrop="dropThis(event)" ondragover="allowDropThis(event)">Left side div</div>
+    
+  
+  <div id="right" draggable="true" ondragstart="dragThis(event)">Right side div</div>
+</div>
+
+  <!-- <p>Drag the Doggo logo into the square:</p>
+
+	<div id="fig" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+
+	<img id="drag" src="https://cdn.bitdegree.org/learn/pom-laptop.png?raw=true" draggable="true" ondragstart="dragThis(event)" width="200" height="200"> -->
+
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>

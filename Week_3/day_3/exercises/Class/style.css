@@ -1,0 +1,7 @@
+#container {
+    border: 2px solid red;
+    background-color: yellow;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden;
+}

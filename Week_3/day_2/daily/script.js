@@ -5,14 +5,18 @@ let libIt = function (event) {
     console.log(nounInput);
 
     let adjectiveInput = document.getElementById("adjective").value;
-    //let adjectiveInputValue = adjectiveInput.value;
-    //adjectiveInput.style.color = "red";
     console.log(adjectiveInput);
 
     let personInput = document.getElementById("person").value;
     console.log(personInput);
     
     let storyDiv = document.getElementById("story");
-    storyDiv.innerHTML = `${personInput} was thinking about the ${nounInput} when a ${adjectiveInput} policeman asked to see the papers `;
+    storyDiv.innerHTML = `<span>${personInput}</span> was thinking about the <span>${nounInput}</span> when a <span>${adjectiveInput}</span> policeman asked to see the papers `;
+    
+    let spanAll =document.querySelectorAll("span");
+    for (i=0;i<spanAll.length;i++){
+        document.getElementsByTagName("span")[i].style.color ="red";
+    }
 };
+
 libButton.addEventListener('click', libIt);
