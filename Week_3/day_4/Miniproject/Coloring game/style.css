@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: 2px solid black;
+    background-color: #A9A9A9;
+    grid-gap:3px;
+    width: 70%;
+    height: 100%;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap:5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.palette {
+    border: 1px solid black;
+}
+
+button{
+    grid-column: 1/span 3;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: repeat(60,1fr);
+    grid-template-rows: repeat(24,1fr);
+}
+
+.grid {
+    border: 1px solid black;
+    background-color: white;
+    width: 12px;
+    height: 20px;
+}
