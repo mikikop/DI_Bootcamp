@@ -1,15 +1,28 @@
-let inputHtml = document.getElementById("fname");
-//let charValue = inputHtml.value;
-console.log(inputHtml.textContent);
-inputHtml.addEventListener("keypress", myFunction);
+let inputHtml = document.forms[0].children[2];
+inputHtml.addEventListener("keyup", myFunction);
 
 function myFunction(event){
-    //event.preventDefault();
-    if (!isCharALetter(inputHtml.textContent)){
+    let str = inputHtml.value;
+    if (!isCharALetter(event.keyCode)){
         console.log("not a letter");
+        inputHtml.value = str.slice(0,-1);
     }
 }
 
 function isCharALetter (char){
-    return (/[a-zA-Z]/.test(char));
+    if (char>=65 && char<=90 || char>=97 && char<=122){
+        return true;
+    }else{
+        return false;
+    }
 }
+
+//Igor solution
+// var volume = document.forms[0].children[0];
+//         volume.onkeyup = function (event) {
+//             var str = volume.value;
+//             var x = event.keyCode;
+//             if (x < 65 || x > 122 || (x > 90 && x < 97)) {
+//                 volume.value = str.slice(0, -1);
+//             }
+//         };

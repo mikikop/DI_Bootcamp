@@ -4,20 +4,24 @@ function allowDropThis(event) {
 }
   
 function dragThis(event) {
-	event.dataTransfer.setData("text", event.target.id);
+  event.dataTransfer.setData("text", event.target.id);
+  console.log(event.dataTransfer);
 }
   
-//NOT SUCCESS
 function dropThis(event) {
   event.preventDefault();
-  //let left =event.target.getElementById("left");
   let data = event.dataTransfer.getData("text");
-//   console.log(data);
-//   console.log(event.target);
-//   left.appendChild(document.getElementById(data));
+console.log(data);
+//console.log(event.target);
 event.target.appendChild(document.getElementById(data));
-  console.log(event.target.appendChild(document.getElementById(data)));
+ // console.log(event.target.appendChild(document.getElementById(data)));
 }
+
+
+
+
+
+
 
 
 // function allowDropThis(i) {
