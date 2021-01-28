@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style_visit.css">
+  <title>Visitor - Covid-19 Vaccine</title>
+
+
+</head>
+
+<body>
+    <section class="search-form">
+        <form name="search" role="search">
+          <p class="inp-wrap search-wrap">
+            <label for="search-field" class="search-label grid-40">Find vaccine</label>
+            <input type="search" name="search-term" id="search-field" class="grid-60" placeholder="Macabi? Clalit" /></p>
+          <p class="inp-wrap cat-wrap">
+            <label for="categories" class="grid-20">in</label>
+            <select name="search categories" id="categories" class="grid-80">
+              <option value="Raanana" selected>Raanana</option>
+              <option value="Tel Aviv">Tel Aviv</option>
+            </select>
+          </p>
+          <p class="inp-wrap submit-wrap">
+            <button onclick="findVaccine(event)" class="grid-100 btn">
+              Go
+            </button>
+          </p>
+        </form>
+      </section> 
+
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
