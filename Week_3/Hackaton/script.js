@@ -173,37 +173,40 @@ function vaccineDone() {
 ///////////////////// HTML VISITOR ////////////////
 let cellsKupa = ["NAME", "STOCK", "ADDRESS", "MAP"];
 let infoKupa = [];
-let tableKupa = document.createElement("table");
-tableKupa.remove();
+
 
 function findVaccine(event) {
 	event.preventDefault();
-	infoKupa = [];
-	//tableKupa.remove();
-	let myCity = document.getElementById("categories").value;
-	let myKupa = document.getElementById("search-field").value;
-	let city = myCity.toLowerCase();
-	let kupa = myKupa.toLowerCase();
-	// console.log(city);
-	// console.log(kupa);
-
-	for (let i = 0; i < arrayKupa.length; i++) {
-		if (arrayKupa[i].location == city && arrayKupa[i].name == kupa) {
-
-			let nameK = arrayKupa[i].name;
-			let locationK = arrayKupa[i].location;
-			let addressK = arrayKupa[i].address;
-			let stockuK = arrayKupa[i].stockUpdate;
-
-			infoKupa.push(nameK);
-			infoKupa.push(locationK);
-			infoKupa.push(addressK);
-			infoKupa.push(stockuK);
-			
-			console.log(`the kupa: ${myKupa} and the city ${myCity} has spot in 
-			${arrayKupa[i].address} and it stays ${arrayKupa[i].stockUpdate} vaccines in stock`);
-	}
+	let tableKupa = document.createElement("table");
 	
+		let myCity = document.getElementById("categories").value;
+		let myKupa = document.getElementById("search-field").value;
+		let city = myCity.toLowerCase();
+		let kupa = myKupa.toLowerCase();
+
+		for (let i = 0; i < arrayKupa.length; i++) {
+			if (arrayKupa[i].location == city && arrayKupa[i].name == kupa) {
+				let idK = arrayKupa[i].id;
+				let nameK = arrayKupa[i].name;
+				let locationK = arrayKupa[i].location;
+				let addressK = arrayKupa[i].address;
+				let stockuK = arrayKupa[i].stockUpdate;
+
+			
+						infoKupa.push(idK);
+						infoKupa.push(nameK);
+						infoKupa.push(locationK);
+						infoKupa.push(addressK);
+						infoKupa.push(stockuK);
+			
+				
+				
+
+				console.log(`the kupa: ${myKupa} and the city ${myCity} has spot in 
+			${arrayKupa[i].address} and it stays ${arrayKupa[i].stockUpdate} vaccines in stock`);
+			console.log(infoKupa);
+			}
+			
 			tableKupa.setAttribute("id", "visiTable");
 			//START FOR LOOP i
 			for (let i = 0; i < infoKupa.length; i++) {
@@ -212,7 +215,6 @@ function findVaccine(event) {
 				for (let j = 0; j < 4; j++) {
 					let newCell = newRow.insertCell();
 					if (i == 0) {
-						//NEW
 						newCell.innerHTML = cellsKupa[j]
 					} else {
 						if (j == 3) {
@@ -220,47 +222,44 @@ function findVaccine(event) {
 							icone.addEventListener("click", redirectMap);
 							icone.classList.add("fas", "fa-map-marked");
 							newCell.appendChild(icone);
-						} else {
+						} else{
 							newCell.innerHTML = infoKupa[j];
 						}
 					}
-					//NEW
 					newRow.appendChild(newCell);
 					//END FOR LOOP j
 				}
 				tableKupa.appendChild(newRow);
 				//END FOR LOOP i
 			}
-			//NEW
 			document.body.appendChild(tableKupa);
-			
 		}
-
+	
 }
 
-let addressUrl =["https://goo.gl/maps/aaRXZ2KNgV8i7ecf8","https://goo.gl/maps/xJzNbbw4uRoF6PCK9","https://goo.gl/maps/m2szGtf4sqePLPAN6","https://goo.gl/maps/swY4jTHxYyKMVUNK7","https://goo.gl/maps/91atqRvF6ySrQm6B7"];
+let addressUrl = ["https://goo.gl/maps/aaRXZ2KNgV8i7ecf8", "https://goo.gl/maps/xJzNbbw4uRoF6PCK9", "https://goo.gl/maps/m2szGtf4sqePLPAN6", "https://goo.gl/maps/swY4jTHxYyKMVUNK7", "https://goo.gl/maps/91atqRvF6ySrQm6B7"];
 function redirectMap(event) {
 	event.preventDefault();
 	//retrieve the address
-	
 
-	if (address == "Ben gurion 24, Raanana, Israel"){
+
+	if (address == "Ben gurion 24, Raanana, Israel") {
 		var url = addressUrl[0];
-   		window.location(url);
-	} else if (address == "Ahuza 124, Raanana, Israel"){
+		window.location(url);
+	} else if (address == "Ahuza 124, Raanana, Israel") {
 		var url = addressUrl[1];
-   		window.location(url);
-	} else if (address == "Levi Eshkol 26, Tel Aviv, Israel"){
+		window.location(url);
+	} else if (address == "Levi Eshkol 26, Tel Aviv, Israel") {
 		var url = addressUrl[2];
-   		window.location(url);
-	} else if (address == "Kazan Street 14, Raanana, Israel"){
+		window.location(url);
+	} else if (address == "Kazan Street 14, Raanana, Israel") {
 		var url = addressUrl[3];
-   		window.location(url);
-	} else if (address == "Mapu 3, Tel Aviv, Israel"){
+		window.location(url);
+	} else if (address == "Mapu 3, Tel Aviv, Israel") {
 		var url = addressUrl[4];
-   		window.location(url);
+		window.location(url);
 	} else {
 		alert("This address is not found")
 	}
-	
+
 }
