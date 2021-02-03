@@ -51,9 +51,8 @@
 
 #Ex6
 # list_million = []
-# x = range(1,1000001)
-# for y in x:
-# 	list_million.append(y)
+# for x in range(1,1000001):
+# 	list_million.append(x)
 # print(min(list_million))
 # print(max(list_million))
 # print(sum(list_million))
