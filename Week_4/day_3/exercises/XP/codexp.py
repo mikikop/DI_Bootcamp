@@ -98,13 +98,24 @@
 
 # #who are the Zara clothes. the join() method can be used on tuple
 # clothes = brand['type_of_clothes']
-# print(f'The clothes of Zara are for {" and for ".join(clothes)}')
+# print(f'The clothes of Zara are for {" and for ".join(clothes[:3])}')
+
+# print(f'The clothes of Zara are for {brand['type_of_clothes'][:3]}')
 
 # #add the key country_creation with value Spain
 # brand.update({'country_creation':'Spain'})
+# brand['country_creation']='Spain'
 
 # #add a value to an existing key without to overwrite the other values
+## first solution
 # brand.setdefault('international_competitors',[]).append('Desigual')
+## second solution
+# brand['international_competitors'].append('Desigual')
+## third solution
+# if 'international_competitors' in brand:
+#	brand['international_competitors'].append('Desigual')
+# else: 
+# 	brand['international_competitors'] = 'Desigual'
 
 # #delete a key:value
 # del brand["creation_date"]
@@ -146,7 +157,7 @@ i = 0
 j = 0
 k = 0
 
-#1 output
+#1 output 
 for key in users:
 	disney_users_A[key]= i
 	i +=1
@@ -165,10 +176,10 @@ for key in users:
 	j +=1
 print(disney_users_C)
 
-#4 NOT FOUND HOW TO GET A CHAR FROM A STRING IF IT EXISTS
-for key in users:
-	if key[0] == "M" or key[0] == "P":
-		disney_users_D[key]= k
+#4
+for name in users:
+	if "i" in name and name[0] in ["M","P"]:
+		disney_users_D[name]= k
 		k +=1
 print(disney_users_D)
 
