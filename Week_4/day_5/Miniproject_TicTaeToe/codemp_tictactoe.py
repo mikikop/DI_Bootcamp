@@ -45,7 +45,7 @@ def display_board(player,board):
 	print("-------------")
 	print(f"| {board[2][0]} | {board[2][1]} | {board[2][2]} |")
 	print("-------------")
-	boolean = check_win()
+	return check_win()
 	print(boolean)
 	
 
@@ -59,12 +59,9 @@ def player_input(player):
 
 #check winner
 def check_win():
-	print("avant")
-	for win_combinaison in win_combinaisons:
-		print("apres for")
-		if board[win_combinaison[0][0]][win_combinaison[0][1]]==board[win_combinaison[0][0]][win_combinaison[0][1]]==board[win_combinaison[0][0]][win_combinaison[0][1]]:
-			print("apres if")
-			print(f'player {board[win_combinaison[0][0]][win_combinaison[0][1]]} wins')
+	for condition in win_combinaisons:
+		if board[condition[0][0]][condition[0][1]]==board[condition[1][0]][condition[1][1]]==board[condition[2][0]][condition[2][1]] != '':
+			print(f'player {board[condition[0][0]][condition[0][1]]} wins')
 			return True
 			exit()
 		else:
@@ -84,6 +81,7 @@ def play(isWinner):
 	print("-------------")
 	print("| 7 | 8 | 9 |")
 	print("-------------")
+
 
 	while isWinner == False:
 		isWinner = display_board(player1,board)
