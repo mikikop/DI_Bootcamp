@@ -41,6 +41,7 @@ function stop(){
     print("OO:00:00");
     elapsedTime = 0;
     showButton("PLAY");
+    
 }
 
 function showButton(buttonKey) {
