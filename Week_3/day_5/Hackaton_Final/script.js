@@ -49,6 +49,8 @@ function showButton(buttonKey) {
     const buttonToHide = buttonKey === "PLAY" ? stopButton : playButton;
     buttonToHide.style.display = "none";
     buttonToShow.style.display = "block";
+    let lanternes = document.getElementById("lanternes");
+    let lanterne = 
 }
 
 
