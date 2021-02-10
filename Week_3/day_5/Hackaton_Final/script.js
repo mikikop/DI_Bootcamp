@@ -1,6 +1,7 @@
 let startTime;
 let elapsedTime = 0;
 let timerInterval;
+let count = 1;
 
 function timeToString(time){
     let hours = time/3600000;
@@ -41,6 +42,12 @@ function stop(){
     print("OO:00:00");
     elapsedTime = 0;
     showButton("PLAY");
+    let lanterne = document.createElement("div");
+    lanterne.classList.add("lanterne");
+    console.log(count);
+    lanterne.getElementsByClassName("lanterne").innerHTML = "count";
+    count +=1;
+    lanternes.append(lanterne);
     
 }
 
@@ -50,7 +57,6 @@ function showButton(buttonKey) {
     buttonToHide.style.display = "none";
     buttonToShow.style.display = "block";
     let lanternes = document.getElementById("lanternes");
-    let lanterne = 
 }
 
 

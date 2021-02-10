@@ -34,22 +34,22 @@ class Currency:
 		return str(self.amount) + " " + self.label
 
 	def __add__(self,other):
-		if type(other)== int:
-			return self.amount + other
-		elif type(other) == Currency:
+		if isinstance(other, int):
+			return Currency(self.label, self.amount + other)
+		elif isinstance(other, Currency):
 			if self.label == other.label:
-				return self.amount + other.amount	
+				return Currency(self.label, self.amount + other.amount)	
 			else:
 		 		raise TypeError(f"Cannot add between Currency type {self.label} and {other.label}")
 
 	def __iadd__(self,other):
-		if type(other)== int:
+		if isinstance(other, int):
 			 self.amount += other
 			 return self
-		elif type(other) == Currency:
+		elif isinstance(other, Currency):
 			if self.label == other.label:
 				self.amount += other.amount
-				retun self
+				return self
 			else:
 		 		raise TypeError(f"Cannot add between Currency type {self.label} and {other.label}")
 

@@ -84,3 +84,13 @@ button {
 .time {
     margin-left: 290px;
 }
+
+.lanterne {
+    display: inline-block;
+    background-color: red;
+    border: solid 1px white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
