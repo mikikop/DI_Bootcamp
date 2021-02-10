@@ -25,20 +25,28 @@ class Text():
 				count += 1
 		return count
 
-	def most_frequent(self):
-		max_list = []
-
+	def string_dict(self):
 		for word in self.words:
 			if word not in self.word_dict.keys():
 				self.word_dict[word] = 1
 			else:
 				self.word_dict[word] += 1
+		return self.word_dict
 
-		max_occ = max(self.word_dict.values())
-		for key,value in self.word_dict.items():
+	def most_frequent(self):
+		max_list = []
+
+		# for word in self.words:
+		# 	if word not in self.word_dict.keys():
+		# 		self.word_dict[word] = 1
+		# 	else:
+		# 		self.word_dict[word] += 1
+		my_dict = self.string_dict()
+		max_occ = max(my_dict.values())
+		for key,value in my_dict.items():
 			if value == max_occ:
 				max_list.append((key,value))
-
+		my_dict.clear()
 		return max_list
 
 
@@ -95,15 +103,15 @@ class Text():
 
 class TextModification(Text):
 	
-	def __init__(self, my_string, words ='',word_dict={}):
-		super().__init__(self, my_string, words ='',word_dict={})
+	def __init__(self, my_string):
+		super().__init__(my_string, words ='',word_dict={})
 	
 	def no_punct(self):
 		new_list = []
-
-		for word in self.words:
-			self.words.append(word.translate(str.maketrans('','',string.punctuation)))
-		return self.words
+		my_dict = self.string_dict()
+		for word in my_dict.keys():
+			new_list.append(word.translate(str.maketrans('','',string.punctuation)))
+		return new_list
 
 
 
