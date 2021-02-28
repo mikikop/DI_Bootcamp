@@ -2,6 +2,7 @@ let startTime;
 let elapsedTime = 0;
 let timerInterval;
 let count = 1;
+let timeTab = [];
 
 function timeToString(time){
     let hours = time/3600000;
@@ -34,24 +35,46 @@ function start(){
         elapsedTime = Date.now() - startTime;
         print(timeToString(elapsedTime));
     }, 10);
+    
     showButton("STOP");
 }
 
 function stop(){
+    timeTab.push(elapsedTime);
+    console.log(timeTab)
     clearInterval(timerInterval);
     print("OO:00:00");
-    elapsedTime = 0;
     showButton("PLAY");
     let lanterne = document.createElement("div");
+    let counter = document.createElement("span");
+    let label = document.createElement("span");
     lanterne.classList.add("lanterne");
-    console.log(count);
-    lanterne.getElementsByClassName("lanterne").innerHTML = "count";
-    count +=1;
+    let stopTime = timeToString(elapsedTime);
+    label.innerHTML = stopTime;
+    lanterne.append(count);
     lanternes.append(lanterne);
-    
+    lanternes.append(label);
+    count = count+1;
+    if (count == 11) {
+        let avg = averageTime(timeTab);
+        let avgerageLabel = document.createElement("div");
+        lanternes.append(avgerageLabel)
+        console.log(timeToString(avg));
+    }
+    elapsedTime = 0;
 }
 
+function averageTime(timeTab) {
+    let total = 0;
+    for (const key in timeTab) {
+        total += timeTab[key];
+    }
+    return total/timeTab.length;
+}
+
+
 function showButton(buttonKey) {
+    event.preventDefault();
     const buttonToShow = buttonKey === "PLAY" ? playButton : stopButton;
     const buttonToHide = buttonKey === "PLAY" ? stopButton : playButton;
     buttonToHide.style.display = "none";

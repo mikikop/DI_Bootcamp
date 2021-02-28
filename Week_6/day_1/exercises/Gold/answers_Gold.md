@@ -32,8 +32,8 @@ SELECT (first_name,last_name) FROM students WHERE first_name LIKE 'a%';
 
 SELECT (first_name,last_name) FROM students WHERE first_name LIKE '%a';
 
-SELECT (first_name,last_name) FROM students WHERE first_name LIKE '%a%' OFFSET 2;
+SELECT (first_name,last_name) FROM students WHERE first_name LIKE '%a_';
 
 SELECT (first_name,last_name) FROM students WHERE student_id = 1 AND student_id = 3;
 
-SELECT (first_name,last_name, birth_date) FROM students WHERE birth_date >= 1/01/2000;
+SELECT (first_name,last_name, birth_date) FROM students WHERE birth_date >= '1/01/2000';

@@ -24,7 +24,7 @@ h1 {
 }
 
 .circle {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 
@@ -39,15 +39,17 @@ h1 {
 
 img {
     margin-left: 80px;
-    margin-top: -100px;
-    justify-content: center;
-    align-items: center;
+    margin-top: -140px;
+
 }
 
 .time {
+    position: relative;
     font-family: "Roboto Mono",sans-serif;
     font-weight: 300;
     font-size: 48px;
+    left: 638px;
+    top : 80px;
 }
 
 button {
@@ -61,14 +63,13 @@ button {
 }
 
 .controls {
-    display: flex;
-    justify-content: center;
-    
+    position: relative;
     width: 150px;
 }
 
 #playButton {
     display: block;
+
 }
 
 #stopButton {
@@ -81,16 +82,16 @@ button {
     text-shadow: 2px 2px 10px #fff, 0 0 50px #f2c94c;
 }
 
-.time {
-    margin-left: 290px;
-}
-
 .lanterne {
     display: inline-block;
+    position: relative;
+    top: 100px;
+    left: 30px;
     background-color: red;
     border: solid 1px white;
     border-radius: 50%;
     height: 50px;
     width: 50px;
     margin: 10px;
+    font-size: 20px;
 }
