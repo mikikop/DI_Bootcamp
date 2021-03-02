@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to Family Home Page</h1>
+
+
+
+    {{name}}
+    {% for animal in animals %}
+        <h2>{{animal.name}}</h2>
+    {% endfor %}
+<p>
+    <a href="/info/animal/">To Animal's page</a>
+</p>
+
+{% endblock %}
+
+{% block title %}
+Family Page
+{% endblock %}
