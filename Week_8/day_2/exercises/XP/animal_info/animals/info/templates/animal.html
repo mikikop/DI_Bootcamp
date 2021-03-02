@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2>{{animal.name}}</h2>
+<ul>
+    <li><span>Number of legs: </span>{{animal.legs}}</li>
+    <li><span>Weight: </span>{{animal.weight}}</li>
+    <li><span>Height: </span>{{animal.height}}</li>
+    <li><span>Speed: </span>{{animal.speed}}</li>
+</ul>
+
+<a href="../animals">Back to the list of Animals</a>
+
+{% endblock %}

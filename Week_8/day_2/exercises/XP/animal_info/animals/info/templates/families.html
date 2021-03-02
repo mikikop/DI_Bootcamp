@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <ul>
+        {% for family in families %}
+            <li><a href="family/{{family.id}}">{{family.name}}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <a href="animals">Back to the list of Animals</a>
+
+    {% endblock %}
