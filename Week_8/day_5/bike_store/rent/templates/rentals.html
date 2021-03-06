@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Rental Date</th>
+        <!-- <th scope="col">Return Date</th>
+        <th scope="col">Days</th> -->
+        <th scope="col">Customer</th>
+        <!-- <th scope="col">Vehicule</th>
+        <th scope="col">Cost</th> -->
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    {% for rental in Rentals %}
+    <tbody>
+      <tr>
+        <th scope="row">{{rental.id}}</th>
+        <td>{{rental.rental_date}}</td>
+        <!-- <td>{{rental.return_date}}</td>
+        <td>{{rental.period}}</td> -->
+        <td>{{rental.customer}}</td>
+        <!-- <td>{{rental.vehicle}}</td>
+        <td>{{rental.bill}}</td> -->
+        <td><a href="../rental/{{rental.id}}">Check</a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>        
+{% endblock %}
